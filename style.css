@@ -1,0 +1,14 @@
+body {
+  font-family: system-ui, sans-serif;
+}
+
+.btn {
+  background: #2563eb;
+  color: white;
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+}
+.btn:hover {
+  background: #1d4ed8;
+}

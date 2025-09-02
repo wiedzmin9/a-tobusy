@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rozkład Jazdy</title>
+  <link rel="stylesheet" href="style.css">
+  <link rel="manifest" href="manifest.json">
+</head>
+<body class="bg-gray-100 text-gray-900">
+  <header class="bg-blue-600 text-white p-4 text-center text-xl font-bold">
+    🚍 Rozkład Jazdy MPK Kielce
+  </header>
+
+  <main class="p-4 space-y-6">
+    <div id="line-selector" class="flex gap-2 justify-center">
+      <button onclick="loadLine('linia201')" class="btn">Linia 201</button>
+      <button onclick="loadLine('linia208')" class="btn">Linia 208</button>
+    </div>
+
+    <section id="schedule" class="hidden">
+      <h2 id="line-title" class="text-xl font-semibold mb-2"></h2>
+      <div class="grid grid-cols-2 gap-4">
+        <div>
+          <h3 class="text-lg font-bold">Kierunek A →</h3>
+          <ul id="dirA" class="list-disc pl-5"></ul>
+        </div>
+        <div>
+          <h3 class="text-lg font-bold">← Kierunek B</h3>
+          <ul id="dirB" class="list-disc pl-5"></ul>
+        </div>
+      </div>
+    </section>
+
+    <section id="next-departure" class="bg-green-100 p-3 rounded hidden">
+      <h3 class="font-bold text-green-700">Najbliższy odjazd z Dworca w Kielcach:</h3>
+      <p id="next-time" class="text-lg font-semibold"></p>
+    </section>
+  </main>
+
+  <script src="app.js"></script>
+</body>
+</html>
